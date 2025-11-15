@@ -11,7 +11,7 @@ public class HelloController {
 
     @GetMapping("/")
     public ResponseEntity<String> hello(){
-        return ResponseEntity.ok("Hello, Spring");
+        return ResponseEntity.ok("Hello, Spring Red Hat Openshift....");
     }
 
 }
