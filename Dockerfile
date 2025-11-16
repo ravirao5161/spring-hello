@@ -1,7 +1,9 @@
 ############### Stage 1: Build with Maven ###############
 FROM registry.access.redhat.com/ubi8/openjdk-17 AS builder
 
-WORKDIR /opt/app-root
+RUN mkdir -p /app && chmod -R g+rwX /app
+
+WORKDIR /app
 
 # Copy pom.xml first for caching dependencies
 COPY pom.xml .
